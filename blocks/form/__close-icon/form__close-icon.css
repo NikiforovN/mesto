@@ -1,0 +1,22 @@
+.form__close-icon {
+  background-image: url(../../../images/form__close-icon.svg);
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: -42px;
+  right: -42px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  min-width: 32px;
+  min-height: 32px;
+  cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  .form__close-icon {
+    right: 0;
+    top: -24px;
+    min-width: 20px;
+    min-height: 20px;
+  }
+}

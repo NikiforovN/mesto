@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./page/index.css">
+</head>
+<body class="root">
+    <header class="header">
+        <img src="./images/header__logo.svg" alt="Логотип Место" class="header__logo">
+    </header>
+    <main>
+        <section class="profile">
+            <div class="profile__avatar">
+                <img src="./images/profile__avatar.jpg" alt="Жак-Ив Кусто" class="profile__pic">
+            </div>
+            <div class="profile__info">
+                <div class="profile__info-first-row">
+                    <p class="profile__name">Жак-Ив Кусто</p>
+                    <button class="profile__edit-button" name="Редактировать профиль">
+                        <img src="./images/profile__edit-button.svg" alt="карандаш" class="profile__edit-button-pic">
+                    </button>
+                </div>
+                <p class="profile__status">Исследователь океана</p>
+            </div>
+            <button class="profile__add-button"> 
+                <img src="./images/profile__add-button.svg" alt="Плюс" class="profile__add-button-pic">
+            </button>
+        </section>
+        <section class="elements">
+            <div class="element">
+               <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Карачаевск</h3>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/Elbrus.jpg" alt="Эльбрус" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Гора Эльбрус</h3>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Домбай</h3>
+                    <button class="element__like-button"></button>    
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/Elbrus.jpg" alt="Гора Эльбрус" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Гора Эльбрус</h3>
+                    <button class="element__like-button"></button>       
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Домбай</h3>
+                    <button class="element__like-button"></button>
+                </div>
+            </div>
+            <div class="element">
+                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
+                <div class="element__content">
+                    <h3 class="element__title">Карачаево-Черкесия</h3>
+                    <button class="element__like-button"></button>    
+                </div>
+            </div>
+        </section>
+        <section class="form">
+            <div class="form__rectangle">
+                <p class="form__title">Редактировать профиль</p>
+                <button class="form__close-icon"></button>
+                <input type="text" class="form__field" name="name">
+                <input type="text" class="form__field" name="status">
+                <button class="form__button">Сохранить</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy;2021 Mesto Russia</p>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+</html>
