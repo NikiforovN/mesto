@@ -18,14 +18,14 @@
             </div>
             <div class="profile__info">
                 <div class="profile__info-first-row">
-                    <p class="profile__name">Жак-Ив Кусто</p>
-                    <button class="profile__edit-button" name="Редактировать профиль">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit-button buttons-hover" name="Редактировать профиль">
                         <img src="./images/profile__edit-button.svg" alt="карандаш" class="profile__edit-button-pic">
                     </button>
                 </div>
                 <p class="profile__status">Исследователь океана</p>
             </div>
-            <button class="profile__add-button"> 
+            <button class="profile__add-button buttons-hover"> 
                 <img src="./images/profile__add-button.svg" alt="Плюс" class="profile__add-button-pic">
             </button>
         </section>
@@ -73,19 +73,21 @@
                 </div>
             </div>
         </section>
-        <section class="form">
-            <div class="form__rectangle">
-                <p class="form__title">Редактировать профиль</p>
-                <button class="form__close-icon"></button>
-                <input type="text" class="form__field" name="name">
-                <input type="text" class="form__field" name="status">
-                <button class="form__button">Сохранить</button>
-            </div>
-        </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy;2021 Mesto Russia</p>
     </footer>
+    <section class="form">
+        <div class="form__rectangle">
+            <p class="form__title">Редактировать профиль</p>
+            <button class="form__close-icon buttons-hover"></button>
+            <form class="form__container" action="" method="get">
+                <input type="text" class="form__field" name="name" value="Жак-Ив Кусто" id="name">
+                <input type="text" class="form__field" name="status" value="Исследователь океана" id="status">
+                <button class="form__button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
     <script src="./script/script.js"></script>
 </body>
 </html>

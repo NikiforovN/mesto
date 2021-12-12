@@ -6,6 +6,7 @@
   border-radius: 2px;
   padding: 0;
   cursor: pointer;
+  transition: 0.5s;
 }
 @media screen and (max-width:980px) {
   .profile__add-button{
