@@ -9,14 +9,20 @@ closeButton.addEventListener("click", toggleForm);
 
 let profileName = document.querySelector(".profile__name");
 let profileStatus = document.querySelector(".profile__status");
-const submit = document.querySelector(".form__button");
-let formElement = document.querySelector('.form__container');
-let nameInput = formElement.querySelector('#name');
-let statusInput = formElement.querySelector('#status');
+let formElement = document.querySelector(".form__container");
+let nameInput = formElement.querySelector("#name");
+let statusInput = formElement.querySelector("#status");
 function formSubmitHandler(event) {
   event.preventDefault();
   profileName.textContent = nameInput.value;
   profileStatus.textContent = statusInput.value;
 }
-formElement.addEventListener('submit', formSubmitHandler);
+formElement.addEventListener("submit", formSubmitHandler);
+formElement.addEventListener("submit", toggleForm);
+
+function editFormWithoutEdit() {
+  nameInput.value = profileName.textContent;
+  statusInput.value = profileStatus.textContent;
+}
+closeButton.addEventListener("click", editFormWithoutEdit);
 
