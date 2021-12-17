@@ -13,6 +13,6 @@
 
 **gh-pages**
 
-* [Ссылка на gh-pages](https://nikiforovn.github.io/mesto/index.html)
+* [Ссылка на gh-pages](https://nikiforovn.github.io/mesto/)
 
 
