@@ -19,13 +19,13 @@
             <div class="profile__info">
                 <div class="profile__info-first-row">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
-                    <button class="profile__edit-button buttons-hover" name="Редактировать профиль">
+                    <button  type="button" class="profile__edit-button buttons-hover" name="Редактировать профиль">
                         <img src="./images/profile__edit-button.svg" alt="карандаш" class="profile__edit-button-pic">
                     </button>
                 </div>
                 <p class="profile__status">Исследователь океана</p>
             </div>
-            <button class="profile__add-button buttons-hover"> 
+            <button  type="button" class="profile__add-button buttons-hover"> 
                 <img src="./images/profile__add-button.svg" alt="Плюс" class="profile__add-button-pic">
             </button>
         </section>
@@ -33,43 +33,43 @@
             <div class="element">
                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Карачаевск</h3>
-                    <button class="element__like-button"></button>
+                    <h2 class="element__title">Карачаевск</h2>
+                    <button  type="button" class="element__like-button"></button>
                 </div>
             </div>
             <div class="element">
                 <img src="./images/Elbrus.jpg" alt="Эльбрус" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Гора Эльбрус</h3>
-                    <button class="element__like-button"></button>
+                    <h2 class="element__title">Гора Эльбрус</h2>
+                    <button type="button" class="element__like-button"></button>
                 </div>
             </div>
             <div class="element">
                 <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Домбай</h3>
-                    <button class="element__like-button"></button>    
+                    <h2 class="element__title">Домбай</h2>
+                    <button type="button" class="element__like-button"></button>    
                 </div>
             </div>
             <div class="element">
                 <img src="./images/Elbrus.jpg" alt="Гора Эльбрус" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Гора Эльбрус</h3>
-                    <button class="element__like-button"></button>       
+                    <h2 class="element__title">Гора Эльбрус</h2>
+                    <button type="button" class="element__like-button"></button>       
                 </div>
             </div>
             <div class="element">
                 <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Домбай</h3>
-                    <button class="element__like-button"></button>
+                    <h2 class="element__title">Домбай</h2>
+                    <button type="button" class="element__like-button"></button>
                 </div>
             </div>
             <div class="element">
                 <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
                 <div class="element__content">
-                    <h3 class="element__title">Карачаево-Черкесия</h3>
-                    <button class="element__like-button"></button>    
+                    <h2 class="element__title">Карачаево-Черкесия</h2>
+                    <button type="button" class="element__like-button"></button>    
                 </div>
             </div>
         </section>
@@ -77,14 +77,14 @@
     <footer class="footer">
         <p class="footer__copyright">&copy;2021 Mesto Russia</p>
     </footer>
-    <section class="form">
-        <div class="form__rectangle">
-            <p class="form__title">Редактировать профиль</p>
-            <button class="form__close-icon buttons-hover"></button>
-            <form class="form__container" method="get">
-                <input type="text" class="form__field" name="name" value="Жак-Ив Кусто" id="name">
-                <input type="text" class="form__field" name="status" value="Исследователь океана" id="status">
-                <button class="form__button" type="submit">Сохранить</button>
+    <section class="popup">
+        <div class="popup__rectangle">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <button type="button" class="popup__close-icon buttons-hover"></button>
+            <form class="popup__container" method="get">
+                <input type="text" class="popup__field" name="name" value="Жак-Ив Кусто" id="name" placeholder="Введите ваше имя">
+                <input type="text" class="popup__field" name="status" value="Исследователь океана" id="status" placeholder="Введите вашу профессию">
+                <button class="popup__button" type="submit">Сохранить</button>
             </form>
         </div>
     </section>

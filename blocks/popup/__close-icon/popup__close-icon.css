@@ -1,4 +1,4 @@
-.form__close-icon {
+.popup__close-icon {
   background-image: url(../../../images/form__close-icon.svg);
   background-position: center;
   background-size: 100% 100%;
@@ -14,7 +14,7 @@
   transition: 0.5s;
 }
 @media screen and (max-width: 540px) {
-  .form__close-icon {
+  .popup__close-icon {
     right: 0;
     top: -24px;
     min-width: 20px;

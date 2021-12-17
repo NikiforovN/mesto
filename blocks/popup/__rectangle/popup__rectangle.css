@@ -1,5 +1,5 @@
-.form__rectangle {
-  position: fixed;
+.popup__rectangle {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,14 +8,12 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding-top: 34px;
-  top: calc(50% - 330px / 2);
-  left: calc(50% - 430px / 2);
+  
 }
 @media screen and (max-width: 540px) {
-  .form__rectangle {
+  .popup__rectangle {
     width: 74.375%;
     padding: 25px 22px;
-    top: center;
-    left: calc(50% - 44.0625%);
+    
   }
 }
