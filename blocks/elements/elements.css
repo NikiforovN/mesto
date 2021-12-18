@@ -21,5 +21,6 @@
     grid-template-rows: repeat(6, auto);
     justify-content: center;
     padding-top: 36px;
+    gap: 20px;
   }
 }

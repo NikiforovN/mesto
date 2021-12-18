@@ -7,10 +7,14 @@
   padding: 0;
   cursor: pointer;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 @media screen and (max-width:980px) {
   .profile__add-button{
-      margin-top: 36px;
+      margin-top: 32px;
       min-width: 100%;
   }
 }

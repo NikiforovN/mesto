@@ -6,11 +6,15 @@
   color: #000;
   margin: 0;
   z-index: 5;
+  margin-left: 36px;
+  margin-top: 34px;
 }
 @media screen and (max-width: 540px) {
   .popup__title {
     min-width: 238px;
     font-size: 18px;
-    text-align: center;
+    align-self: center;
+    margin-left: 0;
+    margin-top: 25px;
   }
 }

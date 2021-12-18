@@ -15,5 +15,6 @@
     .profile{
         max-width: 88.125%;
         padding-top: 42px;
+        flex-direction: column;
     }
 }
