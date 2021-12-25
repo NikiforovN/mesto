@@ -11,10 +11,10 @@
   .elements {
     grid-template-columns: repeat(2, fit-content(282px));
     grid-template-rows: repeat(3, auto);
-    justify-content: space-between;
+    justify-content: center;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 760px) {
   .elements {
     max-width: 88.125%;
     grid-template-columns: repeat(1, fit-content(282px));

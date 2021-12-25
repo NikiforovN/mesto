@@ -30,57 +30,16 @@
             </button>
         </section>
         <section class="elements">
-            <div class="element">
-               <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Карачаевск</h2>
-                    <button  type="button" class="element__like-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/Elbrus.jpg" alt="Эльбрус" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button type="button" class="element__like-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Домбай</h2>
-                    <button type="button" class="element__like-button"></button>    
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/Elbrus.jpg" alt="Гора Эльбрус" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Гора Эльбрус</h2>
-                    <button type="button" class="element__like-button"></button>       
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/Dombay.jpg" alt="Домбай" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Домбай</h2>
-                    <button type="button" class="element__like-button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="element__image">
-                <div class="element__content">
-                    <h2 class="element__title">Карачаево-Черкесия</h2>
-                    <button type="button" class="element__like-button"></button>    
-                </div>
-            </div>
-        </section>
+
+        </section>    
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy;2021 Mesto Russia</p>
     </footer>
-    <section class="popup">
+    <section class="popup" id="edit-form">
         <div class="popup__rectangle">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <button type="button" class="popup__close-icon buttons-hover"></button>
+            <button type="button" class="close-icon buttons-hover"></button>
             <form class="popup__container" method="get">
                 <input type="text" class="popup__field" name="name" value="Жак-Ив Кусто" id="name" placeholder="Введите ваше имя">
                 <input type="text" class="popup__field" name="status" value="Исследователь океана" id="status" placeholder="Введите вашу профессию">
@@ -88,6 +47,37 @@
             </form>
         </div>
     </section>
+    <section class="popup" id="add-place">
+        <div class="popup__rectangle">
+            <h2 class="popup__title">Новое место</h2>
+            <button type="button" class="close-icon buttons-hover"></button>
+            <form class="popup__container" method="get">
+                <input type="text" class="popup__field" name="title" value="" id="title" placeholder="Название">
+                <input type="text" class="popup__field" name="link" value="" id="link" placeholder="Ссылка на картинку">
+                <button class="popup__button" type="submit">Создать</button>
+            </form>
+        </div>
+    </section>
+    <section class="popup popup_difference_opacity" id="image-popup">
+        <div class="popup__box">
+            <figure class="popup__figure">
+                <img  alt="Карточка" class="popup__pic">
+                <figcaption class="popup__caption"></figcaption>
+            </figure>
+            <button type="button" class="close-icon buttons-hover"></button> 
+         </div>
+    </section>
+    <template id="element">
+        <div class="element">
+        <img  alt="Карточка" class="element__image">
+            <button  type="button" class="element__trash-button"></button>
+            <div class="element__content">
+                <h2 class="element__title"></h2>
+                <button  type="button" class="element__like-button"></button>
+            </div>
+        </div>
+    </template>
+    
     <script src="./script/script.js"></script>
 </body>
 </html>

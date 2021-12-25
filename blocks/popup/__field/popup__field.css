@@ -12,9 +12,14 @@
   line-height: 17px;
   padding-bottom: 13px;
   box-sizing: border-box;
+  outline: 0;
+  transition: 0.5s linear;
 }
 .popup__field:first-of-type {
   margin-top: 54px;
+}
+.popup__field:focus{
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 @media screen and (max-width: 540px) {
   .popup__field {
