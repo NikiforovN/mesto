@@ -45,16 +45,16 @@ const addFormCloseButton = addForm.querySelector(".close-icon");
 const imageFormCloseButton = imageForm.querySelector(".close-icon");
 
 // данные для формы редактирования
-let profileName = document.querySelector(".profile__name");
-let profileStatus = document.querySelector(".profile__status");
+const profileName = document.querySelector(".profile__name");
+const profileStatus = document.querySelector(".profile__status");
 
 // инпуты формы редактирования профиля
-let nameInput = editFormElement.querySelector("#name");
-let statusInput = editFormElement.querySelector("#status");
+const nameInput = editFormElement.querySelector("#name");
+const statusInput = editFormElement.querySelector("#status");
 
 //переменные для формы добавления карточек
-let titleInput = addFormElement.querySelector("#title");
-let linkInput = addFormElement.querySelector("#link");
+const titleInput = addFormElement.querySelector("#title");
+const linkInput = addFormElement.querySelector("#link");
 
 
 //функции открытия и закрытия форм
