@@ -128,7 +128,7 @@ function createCard(item) {
     imageSrc.src = item.link;
     imageSrc.alt = item.name;
     imageTitle.textContent = item.name;
-    closePopup(imageForm);
+    openPopup(imageForm);
   });
 
   return cardElement;
