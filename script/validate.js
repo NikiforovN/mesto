@@ -21,12 +21,12 @@ const hideError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`.popup__${inputElement.id}-error`);
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.classList.remove(config.errorClass);
-  errorElement.textContent = '';
+  errorElement.textContent = ' ';
 };
 
 //проверка валидности инпута
 const checkInputValidity = (formElement, inputElement) => {
-  console.log(inputElement.validity.valid)
+  console.log(`${inputElement.name} - `,inputElement.validity.valid)
   if (!inputElement.validity.valid){
   showError(formElement, inputElement, inputElement.validationMessage);
   }
@@ -49,10 +49,11 @@ const  setEventListeners = (formElement) => {
      toggleButtonState(inputList, buttonElement);
  }); 
   })
+  
 }
 
 // функция включения валидации
-const enableValidation = () =>{
+function enableValidation() {
   // получаем массив форм из документа
   const formList = Array.from(document.querySelectorAll(config.formSelector));
     formList.forEach((formElement)=>{
@@ -75,7 +76,6 @@ const hasInvalidInput = (inputList) => {
 
 //функция изменения состояния кнопки сабмита
 const toggleButtonState = (inputList, buttonElement) => {
-  console.log('1', getComputedStyle(buttonElement).opacity);
   if (hasInvalidInput(inputList)){
     buttonElement.classList.add(config.inactiveButtonClass);
     buttonElement.setAttribute('disabled','disabled');

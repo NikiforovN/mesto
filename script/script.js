@@ -61,6 +61,7 @@ const linkInput = addFormElement.querySelector("#link");
 function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener('keydown',closePopupByEsc);
+  enableValidation();
 }
 
 function closePopup(popup) {
@@ -79,9 +80,9 @@ function closePopupByEsc(evt){
 }
 //Открытие формы редактирования профиля
 editButton.addEventListener("click", () => {
-  openPopup(editForm);
   nameInput.value = profileName.textContent;
   statusInput.value = profileStatus.textContent;
+  openPopup(editForm);
 });
 
 
@@ -162,9 +163,14 @@ function handleAddFormSubmit(event) {
     name: titleInput.value,
     link: linkInput.value,
   });
-  
   linkInput.value = "";
   titleInput.value = "";
   closePopup(addForm);
 }
 addFormElement.addEventListener("submit", handleAddFormSubmit);
+
+
+
+
+
+
