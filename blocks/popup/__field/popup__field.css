@@ -18,9 +18,9 @@
 .popup__field:first-of-type {
   margin-top: 54px;
 }
-.popup__field:focus{
+/* .popup__field:focus{
   border-bottom: 2px solid rgb(0, 0, 0);
-}
+} */
 @media screen and (max-width: 540px) {
   .popup__field {
     min-width: 238px;

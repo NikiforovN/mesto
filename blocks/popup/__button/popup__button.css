@@ -16,6 +16,7 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+  opacity: 1;
 }
 .popup__button:hover {
   opacity: 0.8;
@@ -24,7 +25,7 @@
   .popup__button {
     min-width: 238px;
     margin-top: 45px;
-    margin-bottom: 0;
+    margin-bottom: 25px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;

@@ -60,13 +60,23 @@ const linkInput = addFormElement.querySelector("#link");
 //функции открытия и закрытия форм
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener('keydown',closePopupByEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener('keydown',closePopupByEsc);
 }
 
+function closePopupByClickOnOverlay(evt){
+  if (evt.target === evt.currentTarget)
+  closePopup(evt.target);
+}
 
+function closePopupByEsc(evt){
+  if (evt.key === 'Escape')
+  closePopup(evt.currentTarget.querySelector('.popup_opened'));
+}
 //Открытие формы редактирования профиля
 editButton.addEventListener("click", () => {
   openPopup(editForm);
@@ -77,6 +87,8 @@ editButton.addEventListener("click", () => {
 
 //Закрытие формы редактирования профиля
 editFormCloseButton.addEventListener("click", () => closePopup(editForm));
+editForm.addEventListener('click',closePopupByClickOnOverlay);
+
 
 
 //Открытие формы добавления карточек
@@ -85,11 +97,11 @@ addButton.addEventListener("click", () => openPopup(addForm));
 
 //Закрытие формы добавления карточек
 addFormCloseButton.addEventListener("click", () => closePopup(addForm));
-
+addForm.addEventListener('click',closePopupByClickOnOverlay);
 
 //Закрытие формы с картинкой
 imageFormCloseButton.addEventListener("click", () => closePopup(imageForm));
-
+imageForm.addEventListener('click',closePopupByClickOnOverlay);
 
 // редактирование профиля
 function handleProfileFormSubmit(event) {
