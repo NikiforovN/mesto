@@ -41,10 +41,14 @@
             <h2 class="popup__title">Редактировать профиль</h2>
             <button type="button" class="close-icon buttons-hover"></button>
             <form class="popup__container" method="get" novalidate>
-                <input type="text" class="popup__field" name="name" value="Жак-Ив Кусто" id="name" placeholder="Введите ваше имя" minlength="2" maxlength="40" required>
-                <span class="popup__input-error popup__name-error"></span>
-                <input type="text" class="popup__field" name="status" value="Исследователь океана" id="status" placeholder="Введите вашу профессию" minlength="2" maxlength="200" required>
-                <span class="popup__input-error popup__status-error"></span>
+                <div class="popup__field-container">
+                    <input type="text" class="popup__field" name="name" value="Жак-Ив Кусто" id="name" placeholder="Введите ваше имя" minlength="2" maxlength="40" required>
+                    <span class="popup__input-error popup__name-error"></span>
+                </div>
+                <div class="popup__field-container">
+                    <input type="text" class="popup__field" name="status" value="Исследователь океана" id="status" placeholder="Введите вашу профессию" minlength="2" maxlength="200" required>
+                    <span class="popup__input-error popup__status-error"></span>
+                </div>
                 <button class="popup__button" type="submit">Сохранить</button>
             </form>
         </div>
@@ -54,10 +58,14 @@
             <h2 class="popup__title">Новое место</h2>
             <button type="button" class="close-icon buttons-hover"></button>
             <form class="popup__container" method="get" novalidate>
-                <input type="text" class="popup__field" name="title" value="" id="title" placeholder="Название" minlength="2" maxlength="30" required>
-                <span class="popup__input-error popup__title-error"></span>
-                <input type="url" class="popup__field" name="link" value="" id="link" placeholder="Ссылка на картинку" required>
-                <span class="popup__input-error popup__link-error"></span>
+                <div class="popup__field-container">
+                    <input type="text" class="popup__field" name="title" value="" id="title" placeholder="Название" minlength="2" maxlength="30" required>
+                    <span class="popup__input-error popup__title-error"></span>
+                </div>
+                <div class="popup__field-container">
+                    <input type="url" class="popup__field" name="link" value="" id="link" placeholder="Ссылка на картинку" required>
+                    <span class="popup__input-error popup__link-error"></span>
+                </div>
                 <button class="popup__button" type="submit">Создать</button>
             </form>
         </div>
@@ -81,7 +89,7 @@
             </div>
         </div>
     </template>
-    <script src="./script/script.js"></script>
     <script src="./script/validate.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>

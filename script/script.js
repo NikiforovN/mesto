@@ -61,7 +61,6 @@ const linkInput = addFormElement.querySelector("#link");
 function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener('keydown',closePopupByEsc);
-  enableValidation();
 }
 
 function closePopup(popup) {
@@ -154,7 +153,6 @@ function prependCard(item) {
 
 initialCards.forEach(prependCard);
 
-
 //добавление новых карточек
 function handleAddFormSubmit(event) {
   event.preventDefault();
@@ -163,12 +161,12 @@ function handleAddFormSubmit(event) {
     name: titleInput.value,
     link: linkInput.value,
   });
+  disableSubmitButton(configs,addForm.querySelector(configs.submitButtonSelector));
   linkInput.value = "";
   titleInput.value = "";
   closePopup(addForm);
 }
 addFormElement.addEventListener("submit", handleAddFormSubmit);
-
 
 
 

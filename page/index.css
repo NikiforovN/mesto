@@ -32,6 +32,7 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__field/popup__field.css);
 @import url(../blocks/popup/__field/_type/popup__field_type_error.css);
+@import url(../blocks/popup/field-container/popup__field-container.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__box/popup__box.css);
@@ -43,3 +44,7 @@
 @import url(../blocks/popup/__button/_disabled/popup__button_disabled.css);
 @import url(../blocks/close-icon/close-icon.css);
 @import url(../blocks/buttons-hover/buttons-hover.css);
+
+
+
+

@@ -1,4 +1,7 @@
 .element {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   min-width: 282px;
   max-height: 361px;
   border-radius: 10px;
