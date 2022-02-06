@@ -1,9 +1,5 @@
 import {Card, imageForm} from './card.js'
 import {FormValidator, configs} from './validate.js';
-// исходные карточки на странице
-
-
-
 
 // формы
 const editForm = document.querySelector("#edit-form");
@@ -103,7 +99,5 @@ imageForm.addEventListener('click',closePopupByClickOnOverlay);
     closePopup(addForm);
   } 
 addFormElement.addEventListener("submit", handleAddFormSubmit); 
-
-
 
 export {openPopup}
