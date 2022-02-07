@@ -1,5 +1,5 @@
-import {Card, imageForm} from './card.js'
-import {FormValidator, configs} from './validate.js';
+import {Card, imageForm, initialCards} from './card.js'
+import {validationAddForm} from './validate.js';
 
 // формы
 const editForm = document.querySelector("#edit-form");
@@ -26,7 +26,7 @@ const statusInput = editFormElement.querySelector("#status");
 //переменные для формы добавления карточек
 const titleInput = addFormElement.querySelector("#title");
 const linkInput = addFormElement.querySelector("#link");
-
+const elementVisible = document.querySelector(".elements");
 
 //функции открытия и закрытия форм
 function openPopup(popup) {
@@ -87,17 +87,25 @@ imageForm.addEventListener('click',closePopupByClickOnOverlay);
  function handleAddFormSubmit(event) {
     
     event.preventDefault();
-    const card = new Card({
+      prependCard({
         name: titleInput.value,
         link: linkInput.value,
-      }, '#element');
-      card.prependCard(card);
-      const validationForm = new FormValidator(configs, addForm.querySelector(configs.formSelector))
-      validationForm._disableSubmitButton(addForm.querySelector(configs.submitButtonSelector))
+      });
+      validationAddForm.disableSubmitButton()
     linkInput.value = "";
     titleInput.value = "";
     closePopup(addForm);
   } 
 addFormElement.addEventListener("submit", handleAddFormSubmit); 
 
-export {openPopup}
+ function prependCard(item) {
+  const card = new Card(item, '#element');
+  const cardElement = card.createCard();
+  elementVisible.prepend(cardElement);
+}
+
+initialCards.forEach((item)=>{
+    prependCard(item);
+ });
+
+export {openPopup, editFormElement, addFormElement}

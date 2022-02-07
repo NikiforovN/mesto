@@ -28,7 +28,7 @@ const initialCards = [
       link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
     },
   ];
-const elementVisible = document.querySelector(".elements");
+
 
 class Card {
   constructor(data, selector) {
@@ -44,7 +44,7 @@ class Card {
       .cloneNode(true);
     return cardElement;
   }
-  _createCard() {
+  createCard() {
     this._element = this._getCard();
     this._elementImage = this._element.querySelector(".element__image");
     this._elementTitle = this._element.querySelector(".element__title");
@@ -90,16 +90,9 @@ class Card {
     event.target.closest(".element").remove();
   }
 
-  prependCard(card) {
-    const cardElement = card._createCard();
-    elementVisible.prepend(cardElement);
-  }
+  
 }
-initialCards.forEach((item)=>{
-   const card = new Card(item, '#element');
-   card.prependCard(card);
-  });
 
-export {Card, imageForm};
+export {Card, imageForm, initialCards};
 
 
