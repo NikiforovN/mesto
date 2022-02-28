@@ -5,28 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
-    <link rel="stylesheet" href="./page/index.css">
 </head>
 <body class="root">
     <header class="header">
-        <img src="./images/header__logo.svg" alt="Логотип Место" class="header__logo">
+        <img src="<%=require('./images/header__logo.svg')%>" alt="Логотип Место" class="header__logo">
     </header>
     <main>
         <section class="profile">
             <div class="profile__avatar">
-                <img src="./images/profile__avatar.jpg" alt="Жак-Ив Кусто" class="profile__pic">
+                <img src="<%=require('./images/profile__avatar.jpg')%>" alt="Жак-Ив Кусто" class="profile__pic">
             </div>
             <div class="profile__info">
                 <div class="profile__info-first-row">
                     <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button  type="button" class="profile__edit-button buttons-hover" name="Редактировать профиль">
-                        <img src="./images/profile__edit-button.svg" alt="карандаш" class="profile__edit-button-pic">
+                        <img src="<%=require('./images/profile__edit-button.svg')%>" alt="карандаш" class="profile__edit-button-pic">
                     </button>
                 </div>
                 <p class="profile__status">Исследователь океана</p>
             </div>
             <button  type="button" class="profile__add-button buttons-hover"> 
-                <img src="./images/profile__add-button.svg" alt="Плюс" class="profile__add-button-pic">
+                <img src="<%=require('./images/profile__add-button.svg')%>" alt="Плюс" class="profile__add-button-pic">
             </button>
         </section>
         <section class="elements">
@@ -59,7 +58,7 @@
             <button type="button" class="close-icon buttons-hover"></button>
             <form class="popup__container" method="get" novalidate>
                 <div class="popup__field-container">
-                    <input type="text" class="popup__field" name="title" value="" id="title" placeholder="Название" minlength="2" maxlength="30" required>
+                    <input type="text" class="popup__field" name="name" value="" id="title" placeholder="Название" minlength="2" maxlength="30" required>
                     <span class="popup__input-error popup__title-error"></span>
                 </div>
                 <div class="popup__field-container">
@@ -89,8 +88,5 @@
             </div>
         </div>
     </template>
-    <script type="module" src="./script/validate.js"></script>
-    <script type="module" src="./script/script.js"></script>
-    <script type="module" src="./script/card.js"></script>
 </body>
 </html>

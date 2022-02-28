@@ -1,14 +1,6 @@
-import {editFormElement, addFormElement} from './script.js'
-const configs = {
-  formSelector: ".popup__container",
-  inputSelector: ".popup__field",
-  submitButtonSelector: ".popup__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__field_type_error",
-  errorClass: "popup__input-error_active",
-};
 
-class FormValidator{
+
+export default class FormValidator{
   constructor(data, formElement){
     this._formSelector=data.formSelector
     this._inputSelector=data.inputSelector
@@ -105,10 +97,4 @@ enableValidation() {
   }
 
 }
-  const validationAddForm = new FormValidator(configs, addFormElement.querySelector(configs.formSelector))
-  validationAddForm.enableValidation();
-  const validationEditForm = new FormValidator(configs, editFormElement.querySelector(configs.formSelector))
-  validationEditForm.enableValidation();
-
-export {validationAddForm}
 
