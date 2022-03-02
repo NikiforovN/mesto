@@ -9,9 +9,6 @@ export default class UserInfo {
         this._jobInput = editFormElement.querySelector('#status')//удалить в константах
     }
     getUserInfo(){
-        this._nameInput.value = this._userName.textContent;
-        this._jobInput.value = this._userJob.textContent;
-
         return {
             name: this._userName.textContent,
             job : this._userJob.textContent

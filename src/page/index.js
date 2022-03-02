@@ -11,10 +11,12 @@ import {
   addFormElement,
   editFormElement,
   editButton,
-  addButton
+  addButton,
+  nameInput,
+  statusInput
 } from '../utils/constants.js';
 
-import '../page/index.css';
+import './index.css';
 
 //Создание валидаторов и их запуск
 const validationAddForm = new FormValidator(configs, addFormElement.querySelector(configs.formSelector))
@@ -53,8 +55,14 @@ const editFormPopup = new PopupWithForm(
 editFormPopup.setEventListeners();
 editButton.addEventListener('click', ()=> {
   editFormPopup.open();
-  userInfo.getUserInfo();
+  setInfoInInputs( userInfo.getUserInfo())
 })
+
+function setInfoInInputs({name,job}){
+  nameInput.value = name;
+  statusInput.value = job;
+}
+
 
 //Создание попапа добавления карточек
 const addFormPopup = new PopupWithForm(
