@@ -13,16 +13,16 @@
     <main>
         <section class="profile">
             <div class="profile__avatar">
-                <img src="<%=require('./images/profile__avatar.jpg')%>" alt="Жак-Ив Кусто" class="profile__pic">
+                <img  alt="Жак-Ив Кусто" class="profile__pic">
             </div>
             <div class="profile__info">
                 <div class="profile__info-first-row">
-                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <h1 class="profile__name"></h1>
                     <button  type="button" class="profile__edit-button buttons-hover" name="Редактировать профиль">
                         <img src="<%=require('./images/profile__edit-button.svg')%>" alt="карандаш" class="profile__edit-button-pic">
                     </button>
                 </div>
-                <p class="profile__status">Исследователь океана</p>
+                <p class="profile__status"></p>
             </div>
             <button  type="button" class="profile__add-button buttons-hover"> 
                 <img src="<%=require('./images/profile__add-button.svg')%>" alt="Плюс" class="profile__add-button-pic">
@@ -45,7 +45,7 @@
                     <span class="popup__input-error popup__name-error"></span>
                 </div>
                 <div class="popup__field-container">
-                    <input type="text" class="popup__field" name="status" value="Исследователь океана" id="status" placeholder="Введите вашу профессию" minlength="2" maxlength="200" required>
+                    <input type="text" class="popup__field" name="about" value="Исследователь океана" id="status" placeholder="Введите вашу профессию" minlength="2" maxlength="200" required>
                     <span class="popup__input-error popup__status-error"></span>
                 </div>
                 <button class="popup__button" type="submit">Сохранить</button>
@@ -78,13 +78,38 @@
             <button type="button" class="close-icon buttons-hover"></button> 
          </div>
     </section>
+    <section class="popup popup-confirm">
+        <div class="popup__rectangle popup_difference_height">
+            <button type="button" class="close-icon buttons-hover"></button>
+            <h2 class="popup__title">Вы уверены?</h2>
+            <form class="popup__container" method="get" novalidate>
+                <button class="popup__button popup__button_difference_confirm-form" type="submit">Да</button>
+            </form>
+        </div>
+    </section>
+    <section class="popup" id="change-avatar">
+        <div class="popup__rectangle">
+            <h2 class="popup__title">Обновить аватар</h2>
+            <button type="button" class="close-icon buttons-hover"></button>
+            <form class="popup__container" method="get" novalidate>
+                <div class="popup__field-container">
+                    <input type="url" class="popup__field" name="avatar" value="" id="avatar-link" placeholder="Ссылка" minlength="2" maxlength="250" required>
+                    <span class="popup__input-error popup__avatar-link-error"></span>
+                </div>
+                <button class="popup__button" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </section>
     <template id="element">
         <div class="element">
         <img  alt="Карточка" class="element__image">
             <button  type="button" class="element__trash-button"></button>
             <div class="element__content">
                 <h2 class="element__title"></h2>
-                <button  type="button" class="element__like-button"></button>
+                <div class="element__like-container">
+                    <button  type="button" class="element__like-button"></button>
+                    <span  class="element__like-number"></span>
+                </div>
             </div>
         </div>
     </template>

@@ -26,6 +26,9 @@
     },
   ];
 
+//данные пользователя
+
+
 // конфиг настроек валидатора
 export const configs = {
     formSelector: ".popup__container",
@@ -39,11 +42,13 @@ export const configs = {
 // попапы
 export const editForm = document.querySelector("#edit-form");
 export const addForm = document.querySelector("#add-place");
-export const imageForm = document.querySelector("#image-popup"); 
+export const imageForm = document.querySelector("#image-popup");
+export const changeForm = document.querySelector('#change-avatar') 
 
 // формы
 export const editFormElement = editForm.querySelector(".popup__rectangle");
 export const addFormElement = addForm.querySelector(".popup__rectangle");
+export const changeFormElement = changeForm.querySelector('.popup__rectangle')
 
 // кнопки
 export const editButton = document.querySelector(".profile__edit-button");
@@ -51,6 +56,7 @@ export const editFormCloseButton = editForm.querySelector(".close-icon");
 export const addButton = document.querySelector(".profile__add-button");
 export const addFormCloseButton = addForm.querySelector(".close-icon");
 export const imageFormCloseButton = imageForm.querySelector(".close-icon");
+export const avatarPopupButton = document.querySelector('.profile__avatar')
 
 // данные для формы редактирования
 export const profileName = document.querySelector(".profile__name");
