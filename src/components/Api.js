@@ -9,8 +9,8 @@ export class Api {
         {
             headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+         .then(this._checkResponse)
+        
 
     }
   
@@ -19,8 +19,8 @@ export class Api {
         {
             headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+         .then(this._checkResponse)
+        
     }
   
     editProfile({name, about}){
@@ -33,8 +33,8 @@ export class Api {
                 about
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+         .then(this._checkResponse)
+        
     }
     addCard({name, link}){
         return fetch(`${this._baseUrl}/cards`,
@@ -46,8 +46,8 @@ export class Api {
                 link
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+         .then(this._checkResponse)
+        
     }
     deleteCard(id){
         return fetch(`${this._baseUrl}/cards/${id}`,
@@ -55,8 +55,8 @@ export class Api {
             method: 'DELETE',
             headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+        .then(this._checkResponse)
+        
     }
     deleteLike(id){
         return fetch(`${this._baseUrl}/cards/${id}/likes`,
@@ -64,8 +64,8 @@ export class Api {
             method: 'DELETE',
             headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+        .then(this._checkResponse)
+        
     }
     putLike(id){
         return fetch(`${this._baseUrl}/cards/${id}/likes`,
@@ -73,8 +73,8 @@ export class Api {
             method: 'PUT',
             headers: this._headers
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+        .then( this._checkResponse)
+        
     }
     editAvatar({avatar}){
         return fetch(`${this._baseUrl}/users/me/avatar`,
@@ -85,8 +85,11 @@ export class Api {
                 avatar
               })
         })
-        .then(res => res.ok ? res.json() : Promise.reject(res.status))
-        .catch(res => console.log(`Ошибка: ${res.status}`))
+        .then(this._checkResponse)
+        
+    }
+    _checkResponse(res){
+         return res.ok ? res.json() : Promise.reject(res.status)
     }
   }
   

@@ -7,6 +7,7 @@ export default class Card {
     this._id = data._id
     this._userId = userId;
     this._ownerId = data.owner._id
+    
 
     this._selector = selector;
 
@@ -28,7 +29,7 @@ export default class Card {
     this._elementTitle = this._element.querySelector(".element__title");
     this._elementTrashButton = this._element.querySelector(".element__trash-button");
     this._elementLikeButton = this._element.querySelector(".element__like-button");
-   
+    this._likeCount = this._element.querySelector('.element__like-number');
     
 
     this._elementImage.src = this._link;
@@ -55,8 +56,8 @@ export default class Card {
 
   setLike(newLikesCount){
     this._likes = newLikesCount
-    const likeCount = this._element.querySelector('.element__like-number');
-    likeCount.textContent = this._likes.length
+    
+    this._likeCount.textContent = this._likes.length
     if (this.isLiked()){
       this._elementLikeButton.classList.add("element__like-button_active")
     } else {

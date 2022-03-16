@@ -1,4 +1,4 @@
-import { editFormElement } from "../utils/constants.js";
+
 
 
 export default class UserInfo {
@@ -6,8 +6,7 @@ export default class UserInfo {
         this._userName = document.querySelector(userName);
         this._userJob = document.querySelector(userJob);
         this._userAvatar = document.querySelector(userAvatar)
-        this._nameInput = editFormElement.querySelector('#name')//удалить в константах
-        this._jobInput = editFormElement.querySelector('#status')//удалить в константах
+       
     }
     getUserInfo(){
         return {
