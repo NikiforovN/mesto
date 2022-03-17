@@ -23,27 +23,28 @@ import "./index.css";
 let userId;
 
 //Подключаем апишки
-const getProfilePromise = new Promise(()=>{
+/* const getProfilePromise = new Promise(()=>{
   api.getProfile()
-.then((res) => {
-  userInfo.setUserInfo(res);
-  userInfo.setUserAvatar(res)
-  userId = res._id;
-})
-.catch(console.log);
 })
 
 const getInitialCardsPromise = new Promise(()=>{
   api.getInitialCards()
-.then((res) => {
-  cardList.renderItems(res);
-})
-.catch(console.log);
-})
+}) */ 
 
-const promises = [getInitialCardsPromise, getProfilePromise];
 
-Promise.all(promises)
+
+
+Promise.all([api.getProfile(), api.getInitialCards()])
+  .then(([userData, cards]) => {
+    userInfo.setUserInfo(userData);
+    userInfo.setUserAvatar(userData)
+    userId = userData._id;
+    cardList.renderItems(cards);
+  })
+  .catch((err) => {
+    console.log(err.ok)
+  });
+
 //Создание валидаторов и их запуск
 const validationAddForm = new FormValidator(
   configs,
@@ -87,6 +88,7 @@ function prependCard(item) {
         api.deleteCard(id)
         .then(() => {
           card.deleteCard();
+          confirmPopup.close()
         })
         .catch(res => console.log(`Ошибка: ${res.status}`));
       });
